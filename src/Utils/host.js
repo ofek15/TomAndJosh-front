@@ -1,1 +1,1 @@
-export const HOST = import.meta.env.DEV ? "http://localhost:5000": 'https://tomandjosh-back.onrender.com/'
+export const HOST = import.meta.env.DEV ? "http://localhost:5000": 'https://tomandjosh-back.onrender.com'
