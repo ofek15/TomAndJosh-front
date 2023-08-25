@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+}
+#Codeblock-container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(30, 41, 59);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.goback-btn{
+    width: 50px;
+    height: 25px;
+    font-size: 10px;
+    border-radius: 10px;
+    background-color: rgb(252, 211, 77);
+    color: rgb(51, 65, 85);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 5%;
+    top: 5%;
+}
+.goback-btn:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+#title-solo-puzzle{
+    margin: 3vw;
+    width: 90%;
+    color: rgb(251, 191, 36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+}
+#description-solo-puzzle{
+    width: 90%;
+    background-color: rgb(51, 65, 85);
+    color: rgb(200, 211, 225);
+    display: flex;
+     align-items: center;
+    margin-bottom: 3vw;
+    padding-left: 5px;
+}
+#monaco-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+#btn-box-container{
+    display: flex;
+    width: 90%;
+    margin: 2vw;
+    justify-content:center
+}
+.btn-change-lang{
+    margin: 15px;
+    border-radius: 10px;
+    width: 120px;
+    height: 30px;
+    background-color: rgb(252, 211, 77);
+    border: rgb(252, 211, 77);
+    color: rgb(51, 65, 81);
+}
+.btn-change-lang:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+@media screen and (max-width:625px) {
+    #title-solo-puzzle{
+        font-size: 30px;
+        margin: 4vw;
+    }
+    #description-solo-puzzle{
+        font-size: 15px;
+        margin: 4vw;
+    }
+    .btn-change-lang{
+        margin: 3px;
+        height: 50px;
+    }
+}
+#test-ans-btn{
+    margin: 15px;
+    border-radius: 10px;
+    width: 120px;
+    height: 30px;
+    background-color: rgb(252, 211, 77);
+    border: rgb(252, 211, 77);
+    color: rgb(51, 65, 81);
+}
+#test-ans-btn:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+#table-case{
+    border-collapse: collapse;
+    color: white;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+#smile-container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 90vh;
+}
+#smile-icon{
+    width: 500px;
+    height: 500px;
+}
