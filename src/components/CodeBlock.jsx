@@ -5,9 +5,9 @@ import "./codeblock.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import io from "socket.io-client";
-const socket = io.connect("http://localhost:5000");
 import questions from "../questions.json";
 import { HOST } from "../Utils/host";
+const socket = io.connect(HOST);
 
 
 
