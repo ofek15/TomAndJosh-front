@@ -7,11 +7,10 @@ import { useNavigate } from "react-router-dom";
 import io from "socket.io-client";
 import questions from "../questions.json";
 import { HOST } from "../Utils/host";
-const socket = io.connect(HOST);
-
-
 
 function CodeBlock() {
+
+  const socket = io.connect(HOST);
 
   const files = {
     "puzzle1": {
@@ -41,7 +40,7 @@ function CodeBlock() {
     "puzzle4": {
       name: "script.js",
       language: "javascript",
-      value: `function myFunction(array){
+      value: `function myFunction(object){
   
         return
       }`,
@@ -101,8 +100,15 @@ const [fileName, setFileName] = useState(getKeyByOrder(files,id));
     }
   };
 
+  const sendMessage = () => {
+    socket.emit("send_message", { message: editorContent, room });
+  };
+
+
   useEffect(() => {
-    sendMessage();
+    if(storedUser=="Josh"){
+      sendMessage();
+    }
   }, [editorContent]);
 
   //The useeffect listens to the editorContent, so that every change of the content will send a socket.
@@ -125,10 +131,6 @@ const [fileName, setFileName] = useState(getKeyByOrder(files,id));
     joinRoom();
   }, [room]);
 
-  const sendMessage = () => {
-    socket.emit("send_message", { message: editorContent, room });
-  };
-
   const SuccessPuzzle = ()=>{
     socket.emit("send_succes", { message: "yes", room });
     setSucces(true)
@@ -136,7 +138,9 @@ const [fileName, setFileName] = useState(getKeyByOrder(files,id));
 
   useEffect(() => {
     socket.on("recieve_message", (data) => {
-      setMessageReceived(data.message);
+      if(storedUser=="Tom"){
+        setMessageReceived(data.message);
+      }     
     });
   }, [socket]);
 
