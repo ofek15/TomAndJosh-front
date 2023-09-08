@@ -87,6 +87,9 @@
         margin: 3px;
         height: 50px;
     }
+    .goback-btn{
+        top: 7%;
+    }
 }
 #test-ans-btn{
     margin: 15px;
